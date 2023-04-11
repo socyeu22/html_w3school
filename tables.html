@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background-color: rgb(215, 204, 226);
+        }
         table, td, tr, th {
             border: 1px solid coral;
             /* Thu bọn boder bằng */
@@ -14,15 +17,23 @@
         }
         table {
             background-color: rgb(217, 200, 159);
+            border-spacing: 30px;
         }
         td, th {
             text-align: center;
+            padding: 20px;
+        }
+        tr:hover {
+            background-color: aqua;
+        }
+        th:nth-child(even),td:nth-child(even) {
+            background-color: rgba(150, 212, 212, 0.4);
         }
     </style>
 </head>
 <body>
     <table style="width: 100%;">
-        <caption style="size: 100px; color: blue;">Bảng điểm</caption>
+        <caption style="color: blue;">Bảng điểm</caption>
         <tr>
             <th style="width: 10%;">STT</th>
             <th colspan="2">Họ và tên</th>
@@ -32,7 +43,38 @@
             <th>1</th>
             <td>Nguyễn</td>
             <td>Trường Sinh</td>
+            <td rowspan="4">10</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>Nguyễn</td>
+            <td>Trường Sinh</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>Nguyễn</td>
+            <td>Trường Sinh</td>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>Nguyễn</td>
+            <td>Trường Sinh</td>
+        </tr>
+    </table>
+    <table style="width: 100%;">
+        <caption style="color: blue;">Bảng điểm</caption>
+        <tr>
+            <th style="width: 10%;">STT</th>
+            <th>Họ</th>
+            <th>Tên</th>
+            <th style="width: 10%;">Điểm</th>
+        </tr>
+        <tr style="height: 59px;">
+            <th>1</th>
+            <td>Nguyễn</td>
+            <td>Trường Sinh</td>
             <td>10</td>
+
         </tr>
         <tr>
             <th>1</th>
@@ -53,5 +95,239 @@
             <td>10</td>
         </tr>
     </table>
+    <table style="width: 100%;">
+        <colgroup>
+        <col span="2" style="background-color: aquamarine;">
+        <col span="4" style="background-color: blueviolet;">
+    </colgroup>
+    <caption>CSS cho các nhóm cột</caption>
+    <tr>
+        <th>Thứ 2</th>
+        <th>Thứ 3</th>
+        <th>Thứ 4</th>
+        <th>Thứ 5</th>
+        <th>Thứ 6</th>
+        <th>Thứ 7</th>
+        <th>CN</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    </table>
+
+    <table style="width: 100%;">
+        <colgroup>
+        <col span="2">
+        <col span="4" style="background-color: blueviolet;">
+    </colgroup>
+    <caption>CSS cho các nhóm  ở giữa</caption>
+    <!-- Để CSS cho các nhóm cột ở giữa, thì lựa chọn các nhóm cột đầu, và không để stype gì -->
+    <tr>
+        <th>Thứ 2</th>
+        <th>Thứ 3</th>
+        <th>Thứ 4</th>
+        <th>Thứ 5</th>
+        <th>Thứ 6</th>
+        <th>Thứ 7</th>
+        <th>CN</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    </table>
+
+    <table style="width: 100%;">
+        <colgroup>
+        <col span="2">
+        <col span="2" style="visibility: collapse;">
+    </colgroup>
+    <caption>Ẩn đi các cột thứ 4 va 5</caption>
+    <!-- Ẩn cột -->
+    <tr>
+        <th>Thứ 2</th>
+        <th>Thứ 3</th>
+        <th>Thứ 4</th>
+        <th>Thứ 5</th>
+        <th>Thứ 6</th>
+        <th>Thứ 7</th>
+        <th>CN</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+    </tr>
+    </table>
+    <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Điểm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Nguyễn Văn A</td>
+            <td>8.5</td>
+          </tr>
+          <tr rowspan="2">
+            <td>2-3</td>
+            <td>Trần Thị B</td>
+            <td>9.0</td>
+          </tr>
+          <tr rowspan="2">
+            <td>2-3</td>
+            <td>Phạm Văn C</td>
+            <td>7.5</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Hoàng Thị D</td>
+            <td>8.0</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Nguyễn Thị E</td>
+            <td>9.5</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Điểm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Nguyễn Văn A</td>
+            <td>8.5</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Trần Thị B</td>
+            <td>9.0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Phạm Văn C</td>
+            <td>7.5</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Hoàng Thị D</td>
+            <td>8.0</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Nguyễn Thị E</td>
+            <td>9.5</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
 </body>
 </html>
