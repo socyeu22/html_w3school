@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            font-weight: 600;
+        }
+        body {
+            height: 5000px;
+        }
+        output {
+            border: 1px solid coral;
+        }
+    </style>
+</head>
+<body>
+    <h3>Form cơ bản với text</h3>
+    <form>
+        <label for="Ho">Họ</label> <br>
+        <input type="text" id="Ho" name="Ho" value="Nguyễn"> <br>
+        <label for="Ten">Tên</label> <br>
+        <input type="text" id="Ten" name="Ten" value="Trường Sinh">
+    </form>
+
+    <h3>Radio Buttons</h3>
+    <form>
+        <input type="radio" id="Bun" value="Bun" name="Mon_an">
+        <label for="Bun">Bún</label> <br>
+        <input type="radio" id="Pho" value="Pho" name="Mon_an">
+        <label for="Pho">Phở</label> <br>
+        <input type="radio" id="Com" value="Com" name="Mon_an">
+        <label for="Com">Cơm</label> <br>
+    </form>
+    <h3>Hãy chọn đáp án đúng, có thể chọn nhiều đáp án</h3>
+    <p>Ứng dụng checkboxes</p>
+    <form>
+        <input type="checkbox" id="Cho" value="Cho" name="animals"> <label for="Cho">Bạn có một chú chó</label> <br>
+        <input type="checkbox" id="Meo" value="Meo" name="animals"> <label for="Meo">Bạn có một chú Mèo</label> <br>
+        <input type="checkbox" id="Chim" value="Chim" name="animals"> <label for="Cho">Bạn có một chú Chim</label> <br>
+        <input type="submit" value="Submit">
+    </form>
+    <h3>Form đầy đủ các thẻ</h3>
+    <form action="">
+        <fieldset>
+        <!-- fieldset dùng để nhóm các thẻ lại với nhau
+        legend để đặt tên cho fieldset -->
+        <legend>Khảo sát học sinh</legend>
+        <label for="ten" style="font-weight: 600; padding: 12px 0 12px;">Họ và tên:</label><br>
+        <input type="text" id="ten" name="Gioi_thieu" required autocomplete> <br>
+        <label for="Gioi_tinh">Giới tính</label><br>
+        <!-- Thuộc tính size dùng để hiển thị số lượng phần tử của option ra ngoài màn hình -->
+        <a>Chọn</a> <select name="Gioi_thieu" id="Gioi_tinh" size="2">
+            <option value="Nam">Nam</option>
+            <option value="Nu">Nữ</option>
+            <option value="Khong_xac_dinh">Không xác đinh</option>
+            <option value="Khong_muon_cung_cap">Không muốn cung cấp</option>
+        </select>
+        <p>Cảm nhận của bạn về khoá học</p>
+        <textarea name="Gioi_thieu" id="Cam_nhan" cols="30" rows="10" placeholder="Hãy đưa ra cảm nhận của bạn về khoá học của chúng tôi"></textarea>
+        <br>
+        <input type="submit">
+        <button type="button" onclick="alert('Bạn đã gửi form thành công')">Test gửi <form action=""></form></button>
+        </fieldset>
+    </form>
+
+    <h3>Datalist</h3>
+    <form>
+        <input list="Mon_hoc">
+        <datalist id="Mon_hoc">
+            <option value="Văn"></option>
+            <option value="Toán"></option>
+            <option value="Tiếng Anh"></option>
+            <option value="Vật lý"></option>
+        </datalist>
+    </form>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <!-- câu lệnh oninput để điền thông tin vào trường output -->
+        20<input type="range" name="a" min="20" id="a">100+
+        <input type="number" name="b" id="b">=
+        <output name="x" for="a b" style="border: 1px solid coral;"></output>
+    </form>
+
+    <div>
+        <form oninput="outputmin.value=parseInt(min.value);
+                       outputmax.value=parseInt(max.value);">
+        <fieldset>
+            <legend>Chọn khoảng giá</legend>
+            <p>Giá thấp nhất</p>
+            100.000<input type="range" min="100000" max="500000" name="min" id="min" step="10000">500000
+            <output name="outputmin"></output>
+            <p>Giá cao nhất</p>
+            100.000<input type="range" min="100000" max="500000" name="max" id="max" step="10000">500000
+            <output name="outputmax"></output>
+        </fieldset></form>
+    </div>
+    <form>
+        <input type="color" value="#a52222">
+        <input type="date" readonly>
+        <input type="datetime-local" disabled>
+        <input type="datetime">
+    </form>
+    <input type="file" autofocus multiple>
+    <input type="hidden">
+</body>
+</html>

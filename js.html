@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script> 
+    <button type="button" onclick="myFunction()">Click Me!</button>
+
+    <p id="demo2">This is a demonstration.</p>
+
+    <script>
+    function myFunction() { 
+        // JS có thể thay đổi content, thay đổi stype, thay đổi thuộc tính
+    document.getElementById("demo2").innerHTML = "Hello JavaScript!";
+    document.getElementById("demo2").style.fontSize = "25px"; 
+    document.getElementById("demo2").style.color = "red";
+    document.getElementById("demo2").style.backgroundColor = "yellow"; 
+    }
+    </script>
+
+    <script>
+    function light(sw) {
+      var pic;
+      if (sw == 0) {
+        pic = "https://www.w3schools.com/html/pic_bulboff.gif"
+      } else {
+        pic = "https://www.w3schools.com/html/pic_bulbon.gif"
+      }
+      document.getElementById('myImage').src = pic;
+    }
+    </script>
+    
+    <img id="myImage" src="https://www.w3schools.com/html/pic_bulboff.gif" width="100" height="180">
+    
+    <p>
+    <button type="button" onclick="light(1)">Light On</button>
+    <button type="button" onclick="light(0)">Light Off</button>
+    </p>
+</body>
+</html>
